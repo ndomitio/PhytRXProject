@@ -193,9 +193,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DurationsController.cs" />
+    <Compile Include="Controllers\ExercisController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LogsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PatientsController.cs" />
+    <Compile Include="Controllers\PhysiciansController.cs" />
+    <Compile Include="Controllers\RXesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -260,6 +264,16 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\action-activity-adult-207779.jpg" />
+    <Content Include="Content\images\black-linen.png" />
+    <Content Include="Content\images\bridge.gif" />
+    <Content Include="Content\images\IMG_0572.MOV" />
+    <Content Include="Content\images\IMG_0574.MOV" />
+    <Content Include="Content\images\IMG_0575.MOV" />
+    <Content Include="Content\images\noisy-grid.png" />
+    <Content Include="Content\images\Sidelying Hip Abduction.gif" />
+    <Content Include="Content\images\sidelying_clamshell.gif" />
+    <Content Include="Content\images\wavecut.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -286,6 +300,10 @@
     <Content Include="Models\PhytRx.edmx.diagram">
       <DependentUpon>PhytRx.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\images\Front-end tags for PHYT-RX.docx" />
+    <Content Include="Content\images\PatientViewPageStyleSheet.docx" />
+    <Content Include="Content\images\SiteCSS.docx" />
+    <Content Include="Content\images\SiteLayout.docx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -342,10 +360,29 @@
     <Content Include="Views\Patients\Details.cshtml" />
     <Content Include="Views\Patients\Edit.cshtml" />
     <Content Include="Views\Patients\Index.cshtml" />
+    <Content Include="Views\Exercis\Create.cshtml" />
+    <Content Include="Views\Exercis\Delete.cshtml" />
+    <Content Include="Views\Exercis\Details.cshtml" />
+    <Content Include="Views\Exercis\Edit.cshtml" />
+    <Content Include="Views\Exercis\Index.cshtml" />
+    <Content Include="Views\RXes\Create.cshtml" />
+    <Content Include="Views\RXes\Delete.cshtml" />
+    <Content Include="Views\RXes\Details.cshtml" />
+    <Content Include="Views\RXes\Edit.cshtml" />
+    <Content Include="Views\RXes\Index.cshtml" />
+    <Content Include="Views\Logs\Create.cshtml" />
+    <Content Include="Views\Logs\Delete.cshtml" />
+    <Content Include="Views\Logs\Details.cshtml" />
+    <Content Include="Views\Logs\Edit.cshtml" />
+    <Content Include="Views\Logs\Index.cshtml" />
+    <Content Include="Views\Physicians\Create.cshtml" />
+    <Content Include="Views\Physicians\Delete.cshtml" />
+    <Content Include="Views\Physicians\Details.cshtml" />
+    <Content Include="Views\Physicians\Edit.cshtml" />
+    <Content Include="Views\Physicians\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
