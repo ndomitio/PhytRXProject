@@ -193,9 +193,11 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DurationsController.cs" />
+    <Compile Include="Controllers\ExercisController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PatientsController.cs" />
+    <Compile Include="Controllers\RXesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -342,6 +344,16 @@
     <Content Include="Views\Patients\Details.cshtml" />
     <Content Include="Views\Patients\Edit.cshtml" />
     <Content Include="Views\Patients\Index.cshtml" />
+    <Content Include="Views\Exercis\Create.cshtml" />
+    <Content Include="Views\Exercis\Delete.cshtml" />
+    <Content Include="Views\Exercis\Details.cshtml" />
+    <Content Include="Views\Exercis\Edit.cshtml" />
+    <Content Include="Views\Exercis\Index.cshtml" />
+    <Content Include="Views\RXes\Create.cshtml" />
+    <Content Include="Views\RXes\Delete.cshtml" />
+    <Content Include="Views\RXes\Details.cshtml" />
+    <Content Include="Views\RXes\Edit.cshtml" />
+    <Content Include="Views\RXes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
