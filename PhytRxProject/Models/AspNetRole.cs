@@ -12,24 +12,18 @@ namespace PhytRxProject.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Patient
+    public partial class AspNetRole
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Patient()
+        public AspNetRole()
         {
-            this.RXes = new HashSet<RX>();
+            this.AspNetUsers = new HashSet<AspNetUser>();
         }
     
-        public int PID { get; set; }
-        public string UserID { get; set; }
-        public string PPic { get; set; }
-        public Nullable<int> PhID { get; set; }
-        public Nullable<int> LogID { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
     
-        public virtual Log Log { get; set; }
-        public virtual Physician Physician { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RX> RXes { get; set; }
-        public virtual AspNetUser AspNetUser { get; set; }
+        public virtual ICollection<AspNetUser> AspNetUsers { get; set; }
     }
 }
