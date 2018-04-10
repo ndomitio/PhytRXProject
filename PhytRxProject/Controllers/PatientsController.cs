@@ -21,6 +21,7 @@ namespace PhytRxProject.Controllers
             return View(patients.ToList());
         }
 
+
         // GET: Patients/Details/5
         public ActionResult Details(int? id)
         {
