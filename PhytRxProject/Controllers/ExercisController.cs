@@ -10,120 +10,112 @@ using PhytRxProject.Models;
 
 namespace PhytRxProject.Controllers
 {
-    public class PatientsController : Controller
+    public class ExercisController : Controller
     {
         private Entities db = new Entities();
 
-        // GET: Patients
+        // GET: Exercis
         public ActionResult Index()
         {
-            var patients = db.Patients.Include(p => p.Log).Include(p => p.Physician).Include(p => p.AspNetUser);
-            return View(patients.ToList());
+            var exercises = db.Exercises.Include(e => e.RX);
+            return View(exercises.ToList());
         }
 
-        // GET: Patients/Details/5
+        // GET: Exercis/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Patient patient = db.Patients.Find(id);
-            if (patient == null)
+            Exercis exercis = db.Exercises.Find(id);
+            if (exercis == null)
             {
                 return HttpNotFound();
             }
-            return View(patient);
+            return View(exercis);
         }
 
-        // GET: Patients/Create
+        // GET: Exercis/Create
         public ActionResult Create()
         {
-            ViewBag.LogID = new SelectList(db.Logs, "LogID", "ComTxt");
-            ViewBag.PhID = new SelectList(db.Physicians, "PhID", "PhName");
-            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email");
+            ViewBag.RxID = new SelectList(db.RXes, "RxID", "RxName");
             return View();
         }
 
-        // POST: Patients/Create
+        // POST: Exercis/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PID,UserID,PPic,PhID,LogID")] Patient patient)
+        public ActionResult Create([Bind(Include = "ExID,ExName,ExDesc,ExPic1,ExVid,RxID,DurID")] Exercis exercis)
         {
             if (ModelState.IsValid)
             {
-                db.Patients.Add(patient);
+                db.Exercises.Add(exercis);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.LogID = new SelectList(db.Logs, "LogID", "ComTxt", patient.LogID);
-            ViewBag.PhID = new SelectList(db.Physicians, "PhID", "PhName", patient.PhID);
-            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email", patient.UserID);
-            return View(patient);
+            ViewBag.RxID = new SelectList(db.RXes, "RxID", "RxName", exercis.RxID);
+            return View(exercis);
         }
 
-        // GET: Patients/Edit/5
+        // GET: Exercis/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Patient patient = db.Patients.Find(id);
-            if (patient == null)
+            Exercis exercis = db.Exercises.Find(id);
+            if (exercis == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.LogID = new SelectList(db.Logs, "LogID", "ComTxt", patient.LogID);
-            ViewBag.PhID = new SelectList(db.Physicians, "PhID", "PhName", patient.PhID);
-            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email", patient.UserID);
-            return View(patient);
+            ViewBag.RxID = new SelectList(db.RXes, "RxID", "RxName", exercis.RxID);
+            return View(exercis);
         }
 
-        // POST: Patients/Edit/5
+        // POST: Exercis/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PID,UserID,PPic,PhID,LogID")] Patient patient)
+        public ActionResult Edit([Bind(Include = "ExID,ExName,ExDesc,ExPic1,ExVid,RxID,DurID")] Exercis exercis)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(patient).State = EntityState.Modified;
+                db.Entry(exercis).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.LogID = new SelectList(db.Logs, "LogID", "ComTxt", patient.LogID);
-            ViewBag.PhID = new SelectList(db.Physicians, "PhID", "PhName", patient.PhID);
-            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email", patient.UserID);
-            return View(patient);
+            ViewBag.RxID = new SelectList(db.RXes, "RxID", "RxName", exercis.RxID);
+            return View(exercis);
         }
 
-        // GET: Patients/Delete/5
+        // GET: Exercis/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Patient patient = db.Patients.Find(id);
-            if (patient == null)
+            Exercis exercis = db.Exercises.Find(id);
+            if (exercis == null)
             {
                 return HttpNotFound();
             }
-            return View(patient);
+            return View(exercis);
         }
 
-        // POST: Patients/Delete/5
+        // POST: Exercis/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Patient patient = db.Patients.Find(id);
-            db.Patients.Remove(patient);
+            Exercis exercis = db.Exercises.Find(id);
+            db.Exercises.Remove(exercis);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

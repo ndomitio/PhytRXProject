@@ -10,120 +10,112 @@ using PhytRxProject.Models;
 
 namespace PhytRxProject.Controllers
 {
-    public class PatientsController : Controller
+    public class RXesController : Controller
     {
         private Entities db = new Entities();
 
-        // GET: Patients
+        // GET: RXes
         public ActionResult Index()
         {
-            var patients = db.Patients.Include(p => p.Log).Include(p => p.Physician).Include(p => p.AspNetUser);
-            return View(patients.ToList());
+            var rXes = db.RXes.Include(r => r.Patient);
+            return View(rXes.ToList());
         }
 
-        // GET: Patients/Details/5
+        // GET: RXes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Patient patient = db.Patients.Find(id);
-            if (patient == null)
+            RX rX = db.RXes.Find(id);
+            if (rX == null)
             {
                 return HttpNotFound();
             }
-            return View(patient);
+            return View(rX);
         }
 
-        // GET: Patients/Create
+        // GET: RXes/Create
         public ActionResult Create()
         {
-            ViewBag.LogID = new SelectList(db.Logs, "LogID", "ComTxt");
-            ViewBag.PhID = new SelectList(db.Physicians, "PhID", "PhName");
-            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email");
+            ViewBag.PID = new SelectList(db.Patients, "PID", "UserID");
             return View();
         }
 
-        // POST: Patients/Create
+        // POST: RXes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PID,UserID,PPic,PhID,LogID")] Patient patient)
+        public ActionResult Create([Bind(Include = "RxID,RxName,ExID,PID,PhID,LogID")] RX rX)
         {
             if (ModelState.IsValid)
             {
-                db.Patients.Add(patient);
+                db.RXes.Add(rX);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.LogID = new SelectList(db.Logs, "LogID", "ComTxt", patient.LogID);
-            ViewBag.PhID = new SelectList(db.Physicians, "PhID", "PhName", patient.PhID);
-            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email", patient.UserID);
-            return View(patient);
+            ViewBag.PID = new SelectList(db.Patients, "PID", "UserID", rX.PID);
+            return View(rX);
         }
 
-        // GET: Patients/Edit/5
+        // GET: RXes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Patient patient = db.Patients.Find(id);
-            if (patient == null)
+            RX rX = db.RXes.Find(id);
+            if (rX == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.LogID = new SelectList(db.Logs, "LogID", "ComTxt", patient.LogID);
-            ViewBag.PhID = new SelectList(db.Physicians, "PhID", "PhName", patient.PhID);
-            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email", patient.UserID);
-            return View(patient);
+            ViewBag.PID = new SelectList(db.Patients, "PID", "UserID", rX.PID);
+            return View(rX);
         }
 
-        // POST: Patients/Edit/5
+        // POST: RXes/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PID,UserID,PPic,PhID,LogID")] Patient patient)
+        public ActionResult Edit([Bind(Include = "RxID,RxName,ExID,PID,PhID,LogID")] RX rX)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(patient).State = EntityState.Modified;
+                db.Entry(rX).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.LogID = new SelectList(db.Logs, "LogID", "ComTxt", patient.LogID);
-            ViewBag.PhID = new SelectList(db.Physicians, "PhID", "PhName", patient.PhID);
-            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email", patient.UserID);
-            return View(patient);
+            ViewBag.PID = new SelectList(db.Patients, "PID", "UserID", rX.PID);
+            return View(rX);
         }
 
-        // GET: Patients/Delete/5
+        // GET: RXes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Patient patient = db.Patients.Find(id);
-            if (patient == null)
+            RX rX = db.RXes.Find(id);
+            if (rX == null)
             {
                 return HttpNotFound();
             }
-            return View(patient);
+            return View(rX);
         }
 
-        // POST: Patients/Delete/5
+        // POST: RXes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Patient patient = db.Patients.Find(id);
-            db.Patients.Remove(patient);
+            RX rX = db.RXes.Find(id);
+            db.RXes.Remove(rX);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
