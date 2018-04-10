@@ -264,6 +264,17 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\action-activity-adult-207779.jpg" />
+    <Content Include="Content\images\black-linen.png" />
+    <Content Include="Content\images\bridge.gif" />
+    <Content Include="Content\images\IMG_0572.MOV" />
+    <Content Include="Content\images\IMG_0574.MOV" />
+    <Content Include="Content\images\IMG_0575.MOV" />
+    <Content Include="Content\images\noisy-grid.png" />
+    <Content Include="Content\images\Sidelying Hip Abduction.gif" />
+    <Content Include="Content\images\sidelying_clamshell.gif" />
+    <Content Include="Content\images\wavecut.png" />
+    <Content Include="Content\PatientViewsStyleSheet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -290,6 +301,10 @@
     <Content Include="Models\PhytRx.edmx.diagram">
       <DependentUpon>PhytRx.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\images\Front-end tags for PHYT-RX.docx" />
+    <Content Include="Content\images\PatientViewPageStyleSheet.docx" />
+    <Content Include="Content\images\SiteCSS.docx" />
+    <Content Include="Content\images\SiteLayout.docx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -369,7 +384,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
