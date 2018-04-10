@@ -274,6 +274,9 @@
     <Content Include="Content\images\Sidelying Hip Abduction.gif" />
     <Content Include="Content\images\sidelying_clamshell.gif" />
     <Content Include="Content\images\wavecut.png" />
+
+    <Content Include="Content\PatientViewsStyleSheet.css" />
+
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
