@@ -142,18 +142,16 @@ td {
 /*footer*/
 .lineAboveFooter {
     background-color: #7A9D96;
-    background-image: url('images/wavecut.png');
+    background-image: url('/Content/images/wavecut.png');
     height: 5px;
 }
 
 .footer-content {
     height: 50px;
     background-color: #DCAE1D;
-<<<<<<< HEAD
-    background-image: url('../Images/wavecut.png');
-=======
+
     background-image: url('images/wavecut.png');
->>>>>>> deb26df771c471d84870670cd1f60b3d8388dbf7
+
 }
 
     .footer-content p {
