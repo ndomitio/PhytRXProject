@@ -6,7 +6,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h1>Patient Index</h1>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -39,7 +39,7 @@
             @Html.DisplayFor(modelItem => item.Physician.PhName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PPic)
+            <img src="@Html.DisplayFor(modelItem => item.PPic)" width="200" height="200" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Log.ComTxt)
