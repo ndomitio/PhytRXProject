@@ -217,9 +217,6 @@
     <Compile Include="Models\AspNetUserLogin.cs">
       <DependentUpon>PhytRx.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\C__MigrationHistory.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Duration.cs">
       <DependentUpon>PhytRx.tt</DependentUpon>
     </Compile>
@@ -253,9 +250,6 @@
       <DependentUpon>PhytRx.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\RX.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>PhytRx.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
