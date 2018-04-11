@@ -22,7 +22,6 @@ namespace PhytRxProject.Models
         }
     
         public int PID { get; set; }
-        [Display (Name = "Email")]
         public string UserID { get; set; }
         [Display (Name = "Image")]
         public string PPic { get; set; }
