@@ -4,13 +4,19 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Patient Exercises Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<h3 class="heading1">RX Index</h3>
+
+
+<h5 class="heading2">
+
+    @*@Html.DisplayFor(modelItem => item.Patient.PFName)
+
+        @Html.DisplayFor(modelItem => item.Patients.PLName)*@
+
+</h5>
 <table class="table">
-    <tr>
+    <tr class="backgroundDark">
         <th>
             @Html.DisplayNameFor(model => model.RxName)
         </th>
@@ -18,40 +24,52 @@
             @Html.DisplayNameFor(model => model.ExID)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.PID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.PhID)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.LogID)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Patient.UserID)
-        </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.RxName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ExID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LogID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Patient.UserID)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RxID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RxID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RxID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr class="backgroundMist2">
+
+
+            @*@Html.DisplayFor(modelItem => item.PID)
+
+                @Html.DisplayFor(modelItem => item.PID)*@
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.RxName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.RxID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.RxID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.RxID })
+            </td>
+        </tr>
+    }
 
 </table>
+
+<div> <a href='/RXes/Create' class="btn btn-sm animated-button thar-three" id="patient-home-button">Create New RX</a> </div>
+<div> <a href="#" class="btn btn-sm animated-button thar-three" id="patient-home-button">Return to Records Menu</a> </div>
+<div> <a href="#" class="btn btn-sm animated-button thar-three" id="patient-home-button">Return to DPT Main Menu</a> </div>
