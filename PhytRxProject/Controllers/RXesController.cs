@@ -15,10 +15,12 @@ namespace PhytRxProject.Controllers
         private Entities db = new Entities();
 
         // GET: RXes
-        public ActionResult Index()
-        {
-            var rXes = db.RXes.Include(r => r.Patient);
+        public ActionResult Index(int pID)
+        {       
+            var rXes = db.RXes.Where(r => r.PID == pID);
+            //ViewBag.PID = pID;
             return View(rXes.ToList());
+
         }
 
         // GET: RXes/Details/5

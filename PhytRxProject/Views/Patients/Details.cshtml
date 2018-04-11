@@ -3,8 +3,33 @@
 @{
     ViewBag.Title = "Details";
 }
+<p class="classId" style="display:none">@Html.DisplayFor(model => model.PID)</p>
+<div> <a class="btn btn-sm animated-button thar-three" id="patientLogs">View Logs</a> </div>
+<div> <a class="btn btn-sm animated-button thar-three" id="patientRX">View RXs</a> </div>
+<div> <a class="btn btn-sm animated-button thar-three" id="createRX">Create RX</a> </div>
 
-<h2>Details</h2>
+<script>
+    var patientIdentifier = document.getElementById("classId").innerText
+    var id = parseInt(patientIdentifier)
+
+    $(document).ready(function () {
+
+        $.("#patientLogs").click(function () {
+            window.location.assign("/RXes/index/?pID=" + id);
+        })
+
+        $.("#patientRX").click(function () {
+            window.location.assign("/Patients/index/?pID=" + id);
+        })
+
+        $.("#createRX").click(function () {
+            window.location.assign("/RXes/create/?pID=" + id);
+        })
+
+    })
+</script>
+
+@*<h2>Details</h2>
 
 <div>
     <h4>Patient</h4>
@@ -47,4 +72,4 @@
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.PID }) |
     @Html.ActionLink("Back to List", "Index")
-</p>
+</p>*@

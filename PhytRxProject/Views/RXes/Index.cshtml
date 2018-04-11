@@ -4,6 +4,8 @@
     ViewBag.Title = "Index";
 }
 
+<input @*type="hidden"*@ value="PID" />
+
 <h3 class="heading1">RX Index</h3>
 
 <h5 class="heading2">
@@ -69,5 +71,5 @@
 </table>
 
 <div> <a href='/RXes/Create' class="btn btn-sm animated-button thar-three" id="patient-home-button">Create New RX</a> </div>
-<div> <a href="#" class="btn btn-sm animated-button thar-three" id="patient-home-button">Return to Records Menu</a> </div>
-<div> <a href="#" class="btn btn-sm animated-button thar-three" id="patient-home-button">Return to DPT Main Menu</a> </div>
+<div> <a href='/Patients/Detail' class="btn btn-sm animated-button thar-three" id="patient-home-button">Return to Records Menu</a> </div>
+<div> <a href='/Patients/Index' class="btn btn-sm animated-button thar-three" id="patient-home-button">Return to DPT Main Menu</a> </div>
