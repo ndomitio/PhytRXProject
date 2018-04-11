@@ -264,6 +264,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\DPTViewStyleSheet.css" />
     <Content Include="Content\images\action-activity-adult-207779.jpg" />
     <Content Include="Content\images\black-linen.png" />
     <Content Include="Content\images\bridge.gif" />
@@ -318,6 +319,9 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="script.js" />
     <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
