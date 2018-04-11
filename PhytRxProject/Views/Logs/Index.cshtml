@@ -14,6 +14,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.RX.RxName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Exercis.ExName)
         </th>
         <th>
@@ -34,21 +37,22 @@
         <th>
             @Html.DisplayNameFor(model => model.PartialSet)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.PID)
-        </th>
+        </th>*@
         @*<th>
             @Html.DisplayNameFor(model => model.PhID)
         </th>*@
         
-        <th>
-            @Html.DisplayNameFor(model => model.RX.RxName)
-        </th>
+        
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RX.RxName)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Exercis.ExName)
         </td>
@@ -73,17 +77,15 @@
         @*<td>
             @Html.DisplayFor(modelItem => item.PID)
         </td>*@
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.PhID)
-        </td>
+        </td>*@
+
         
         <td>
-            @Html.DisplayFor(modelItem => item.RX.RxName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.LogID }) |
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.LogID }) |*@
             @Html.ActionLink("Details", "Details", new { id = item.LogID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.LogID })
+            @*@Html.ActionLink("Delete", "Delete", new { id = item.LogID })*@
         </td>
     </tr>
 }
