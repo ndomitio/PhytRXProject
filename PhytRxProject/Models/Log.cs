@@ -11,7 +11,8 @@ namespace PhytRxProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Log
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,11 +23,17 @@ namespace PhytRxProject.Models
         }
     
         public int LogID { get; set; }
+        [Display(Name = "Pain Level")]
         public int PainNumb { get; set; }
+        [Display(Name = "Level of Difficulty")]
         public int DiffNumb { get; set; }
+        [Display(Name = "Patient Comments")]
         public string ComTxt { get; set; }
+        [Display(Name = "Completed")]
         public bool IsComplete { get; set; }
+        [Display(Name = "Full Sets")]
         public Nullable<int> FullSet { get; set; }
+        [Display(Name = "Partial Sets")]
         public Nullable<int> PartialSet { get; set; }
         public int PID { get; set; }
         public int PhID { get; set; }

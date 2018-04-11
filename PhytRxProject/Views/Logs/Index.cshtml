@@ -4,13 +4,18 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Log Index</h2>
+<h3 align="right">Patient Name Here</h3>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Exercis.ExName)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.PainNumb)
         </th>
@@ -29,23 +34,26 @@
         <th>
             @Html.DisplayNameFor(model => model.PartialSet)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.PID)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PhID)
-        </th>
-        <th>
+        </th>*@
+        @*<th>
             @Html.DisplayNameFor(model => model.Exercis.ExName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.RX.RxName)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Exercis.ExName)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.PainNumb)
         </td>
@@ -64,22 +72,22 @@
         <td>
             @Html.DisplayFor(modelItem => item.PartialSet)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhID)
-        </td>
-        <td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Patients.)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Physicians)
+        </td>*@
+        @*<td>
             @Html.DisplayFor(modelItem => item.Exercis.ExName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.RX.RxName)
-        </td>
+        </td>*@
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.LogID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.LogID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.LogID })
+            @*@Html.ActionLink("Edit", "Edit", new { id = item.LogID }) |*@
+            @Html.ActionLink("Details", "Details", new { id = item.LogID }) |
+            @*@Html.ActionLink("Delete", "Delete", new { id = item.LogID })*@
         </td>
     </tr>
 }
