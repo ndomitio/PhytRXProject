@@ -11,25 +11,18 @@ namespace PhytRxProject.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Duration
     {
         public int DurID { get; set; }
-        [Display(Name = "Duration Name")]
         public int DurName { get; set; }
         public int Reps { get; set; }
         public int Sets { get; set; }
         public int Holds { get; set; }
-        [Display(Name = "Resistance")]
         public string Bands { get; set; }
-        [Display(Name = "Weight (lbs)")]
         public Nullable<int> Weights { get; set; }
-        [Display(Name = "Times per Day")]
         public int PerDays { get; set; }
-        [Display(Name = "Total Days")]
         public int XDays { get; set; }
-        [Display(Name = "Exercise Name")]
         public int ExID { get; set; }
     
         public virtual Exercis Exercis { get; set; }
