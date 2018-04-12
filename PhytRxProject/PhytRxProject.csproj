@@ -255,9 +255,6 @@
     <Compile Include="Models\RX.cs">
       <DependentUpon>PhytRx.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
