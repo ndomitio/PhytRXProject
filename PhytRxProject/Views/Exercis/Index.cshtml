@@ -43,10 +43,10 @@
             @Html.DisplayFor(modelItem => item.ExDesc)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ExPic1)
+            <img src="@Html.DisplayFor(modelItem => item.ExPic1)" />
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ExVid)
+            <video src="@Html.DisplayFor(modelItem => item.ExVid)" height="200px" width="200px" controls="controls" autoplay="autoplay"/>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DurID)

@@ -11,8 +11,7 @@ namespace PhytRxProject.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class RX
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,15 +21,11 @@ namespace PhytRxProject.Models
             this.Logs = new HashSet<Log>();
             this.Physicians = new HashSet<Physician>();
         }
-        
+    
         public int RxID { get; set; }
-        [Display(Name = "Exercise Name")]
         public string RxName { get; set; }
-        [Display(Name = "Exercise ID")]
         public int ExID { get; set; }
-        [Display(Name = "Physician ID")]
         public int PID { get; set; }
-        [Display(Name = "Physician Name")]
         public int PhID { get; set; }
         public Nullable<int> LogID { get; set; }
     
