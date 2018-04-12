@@ -11,7 +11,8 @@ namespace PhytRxProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Physician
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,7 +22,9 @@ namespace PhytRxProject.Models
         }
     
         public int PhID { get; set; }
+        [Display(Name = "DPT Name")]
         public string PhName { get; set; }
+        [Display(Name = "Image")]
         public string PhPic { get; set; }
         public Nullable<int> PID { get; set; }
         public Nullable<int> LogID { get; set; }
