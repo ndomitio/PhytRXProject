@@ -11,8 +11,7 @@ namespace PhytRxProject.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Exercis
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,13 +22,9 @@ namespace PhytRxProject.Models
         }
     
         public int ExID { get; set; }
-        [Display (Name = "Exercise Name")]
         public string ExName { get; set; }
-        [Display (Name = "Description")]
         public string ExDesc { get; set; }
-        [Display (Name = "Image")]
         public string ExPic1 { get; set; }
-        [Display (Name = "Video")]
         public string ExVid { get; set; }
         public Nullable<int> RxID { get; set; }
         public Nullable<int> DurID { get; set; }
