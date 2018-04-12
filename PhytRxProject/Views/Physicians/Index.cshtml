@@ -1,4 +1,7 @@
-﻿@model IEnumerable<PhytRxProject.Models.Physician>
+﻿<link href="~/Content/DPTViewStyleSheet.css" rel="stylesheet" />
+
+
+@model IEnumerable<PhytRxProject.Models.Physician>
 
 @{
     ViewBag.Title = "Index";
@@ -17,15 +20,15 @@
         <th>
             @Html.DisplayNameFor(model => model.PhPic)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.PID)
-        </th>
-        <th>
+        </th>*@
+        @*<th>
             @Html.DisplayNameFor(model => model.Log.ComTxt)
-        </th>
-        <th>
+        </th>*@
+        @*<th>
             @Html.DisplayNameFor(model => model.RX.RxName)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
@@ -35,17 +38,17 @@
             @Html.DisplayFor(modelItem => item.PhName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PhPic)
+            <img src="@Html.DisplayFor(modelItem => item.PhPic)" width="200" height="200"/>
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.PID)
-        </td>
-        <td>
+        </td>*@
+        @*<td>
             @Html.DisplayFor(modelItem => item.Log.ComTxt)
-        </td>
-        <td>
+        </td>*@
+        @*<td>
             @Html.DisplayFor(modelItem => item.RX.RxName)
-        </td>
+        </td>*@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.PhID }) |
             @Html.ActionLink("Details", "Details", new { id=item.PhID }) |

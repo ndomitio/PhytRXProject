@@ -43,10 +43,10 @@
             @Html.DisplayFor(modelItem => item.ExDesc)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ExPic1)
+           <img src=" @Html.DisplayFor(modelItem => item.ExPic1)" width="200" height="125" />
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ExVid)
+            <video src="@Html.DisplayFor(modelItem => item.ExVid)" height="200px" width="200px" controls="controls" autoplay="autoplay" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DurID)
@@ -55,8 +55,8 @@
             @Html.DisplayFor(modelItem => item.RX.RxName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ExID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ExID }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.ExID })
+            @Html.ActionLink("Details", "Details", new { id=item.ExID })
             @Html.ActionLink("Delete", "Delete", new { id=item.ExID })
         </td>
     </tr>
