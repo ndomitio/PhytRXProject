@@ -27,6 +27,11 @@ textarea {
 }
 
 /*navbar*/
+.navbarContainer{
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 1300px;
+}
 .navbar-brand {
     font-family: 'Merriweather', 'Times New Roman', serif;
     font-size: 32px;
@@ -48,7 +53,29 @@ textarea {
     .navbar-inverse .navbar-nav li a {
         color: #7A9D96;
     }
+    .navbar-right{
+        padding-top: 15px;
+    }
+    .navbar-right a{
+        padding-right: 10px;
+        color: #7A9D96;
+    }
+    .navbar-right a:hover{
+        color: #ffffff;
+        text-decoration-line: none;
+    }
 
+.logoPic {
+    background-image: url('images/caduceus-symbol-yellow.png');
+    height: 49px;
+    width: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
 .lineBelowNavbar {
     background-color: #7A9D96;
     background-image: url('images/black-linen.png');

@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-        <div class="container">
+        <div class="container navbarContainer">
 
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
@@ -18,37 +18,54 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/Home/Index">Phyt-RX</a>
+                <a  href="/Home/Index" class="logoPic">Logo link</a>
+                
             </div>
 
             <div class="collapse navbar-collapse">
 
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
+                <div class="nav navbar-nav navbar-right">
+                    
+                        <a href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
                         <a href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
-                    </li>
-                </ul>
+                   
+                </div>
             </div>
 
         </div>
     </nav>
     <div class="row lineBelowNavbar"></div>
 
-    <!-- Small modal -->
+    <!--Contact Modal -->
+    <div class="modal" id="contactModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="heading2">Contact Us<i class="fa fa-lock"></i></h3>
+                </div>
+                <div class="modal-body">
+                    <p class="pTag1">If this is a medical emergency, please dial 911.<br /></p>
+                    <p class="pTag1">If you have a question about your RX, call 555-GET-PHYT (555-438-7498)<br /></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logout modal -->
     <div class="modal" id="logoutModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                    <h4>Log Out <i class="fa fa-lock"></i></h4>
+                    <h4>Logout <i class="fa fa-lock"></i></h4>
                 </div>
                 <div class="modal-body">
-                    <p><i class="fa fa-question-circle"></i> Are you sure you want to log-off? <br /></p>
+                    <p><i class="fa fa-question-circle"></i> Are you sure you want to log out? <br /></p>
                     <div class="actionsBtns">
-                        <form action="/logout" method="post">
+                        <form action="/Home/Index" method="post">
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-                            <input type="submit" class="btn btn-default btn-primary" data-dismiss="modal" value="Logout" />
+                            <button class="btn btn-default btn-primary">Logout</button>
                             <button class="btn btn-default" data-dismiss="modal">Cancel</button>
                         </form>
                     </div>
