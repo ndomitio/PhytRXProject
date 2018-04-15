@@ -20,19 +20,23 @@ namespace PhytRxProject.Models
         {
             this.RXes = new HashSet<RX>();
         }
-    
+
         public int PID { get; set; }
         public string UserID { get; set; }
-        [Display (Name = "Image")]
+        [Display(Name = "Patient Image")]
         public string PPic { get; set; }
-        [Display (Name = "DPT Name")]
-        public Nullable<int> PhID { get; set; }
-        public Nullable<int> LogID { get; set; }
-    
+        [Display(Name = "DPT Name")]
+        public Nullable<int>
+        PhID
+        { get; set; }
+        public Nullable<int>
+        LogID
+        { get; set; }
+
+        public virtual AspNetUser AspNetUser { get; set; }
         public virtual Log Log { get; set; }
         public virtual Physician Physician { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RX> RXes { get; set; }
-        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

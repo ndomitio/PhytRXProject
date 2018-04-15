@@ -17,7 +17,7 @@ namespace PhytRxProject.Controllers
         // GET: Patients
         public ActionResult Index()
         {
-            var patients = db.Patients.Include(p => p.Log).Include(p => p.Physician).Include(p => p.AspNetUser);
+            var patients = db.Patients.Include(p => p.AspNetUser).Include(p => p.Log).Include(p => p.Physician);
             return View(patients.ToList());
         }
 
@@ -39,9 +39,9 @@ namespace PhytRxProject.Controllers
         // GET: Patients/Create
         public ActionResult Create()
         {
+            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email");
             ViewBag.LogID = new SelectList(db.Logs, "LogID", "ComTxt");
             ViewBag.PhID = new SelectList(db.Physicians, "PhID", "PhName");
-            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email");
             return View();
         }
 
@@ -59,9 +59,9 @@ namespace PhytRxProject.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email", patient.UserID);
             ViewBag.LogID = new SelectList(db.Logs, "LogID", "ComTxt", patient.LogID);
             ViewBag.PhID = new SelectList(db.Physicians, "PhID", "PhName", patient.PhID);
-            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email", patient.UserID);
             return View(patient);
         }
 
@@ -77,9 +77,9 @@ namespace PhytRxProject.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email", patient.UserID);
             ViewBag.LogID = new SelectList(db.Logs, "LogID", "ComTxt", patient.LogID);
             ViewBag.PhID = new SelectList(db.Physicians, "PhID", "PhName", patient.PhID);
-            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email", patient.UserID);
             return View(patient);
         }
 
@@ -96,9 +96,9 @@ namespace PhytRxProject.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email", patient.UserID);
             ViewBag.LogID = new SelectList(db.Logs, "LogID", "ComTxt", patient.LogID);
             ViewBag.PhID = new SelectList(db.Physicians, "PhID", "PhName", patient.PhID);
-            ViewBag.UserID = new SelectList(db.AspNetUsers, "Id", "Email", patient.UserID);
             return View(patient);
         }
 

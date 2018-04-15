@@ -204,57 +204,54 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AspNetRole.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
+      <DependentUpon>Phyt-RxDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUser.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
+      <DependentUpon>Phyt-RxDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserClaim.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
+      <DependentUpon>Phyt-RxDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserLogin.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
+      <DependentUpon>Phyt-RxDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\C__MigrationHistory.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
+      <DependentUpon>Phyt-RxDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Duration.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
+      <DependentUpon>Phyt-RxDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Exercis.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
+      <DependentUpon>Phyt-RxDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Log.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
+      <DependentUpon>Phyt-RxDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Patient.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
+      <DependentUpon>Phyt-RxDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Physician.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
+      <DependentUpon>Phyt-RxDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PhytRx.Context.cs">
+    <Compile Include="Models\Phyt-RxDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PhytRx.Context.tt</DependentUpon>
+      <DependentUpon>Phyt-RxDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PhytRx.cs">
+    <Compile Include="Models\Phyt-RxDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PhytRx.tt</DependentUpon>
+      <DependentUpon>Phyt-RxDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PhytRx.Designer.cs">
+    <Compile Include="Models\Phyt-RxDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PhytRx.edmx</DependentUpon>
+      <DependentUpon>Phyt-RxDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\RX.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>PhytRx.tt</DependentUpon>
+      <DependentUpon>Phyt-RxDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -264,56 +261,66 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\DPTViewStyleSheet.css" />
     <Content Include="Content\images\action-activity-adult-207779.jpg" />
+    <Content Include="Content\images\Bina 2.JPG" />
     <Content Include="Content\images\black-linen.png" />
     <Content Include="Content\images\bridge.gif" />
+    <Content Include="Content\images\Emmalani.JPG" />
     <Content Include="Content\images\IMG_0572.MOV" />
+    <Content Include="Content\images\img_0572.mp4" />
     <Content Include="Content\images\IMG_0574.MOV" />
+    <Content Include="Content\images\IMG_0574.mp4" />
     <Content Include="Content\images\IMG_0575.MOV" />
+    <Content Include="Content\images\IMG_0575.mp4" />
+    <Content Include="Content\images\Mana.JPG" />
     <Content Include="Content\images\noisy-grid.png" />
     <Content Include="Content\images\Sidelying Hip Abduction.gif" />
     <Content Include="Content\images\sidelying_clamshell.gif" />
     <Content Include="Content\images\wavecut.png" />
     <Content Include="Content\PatientViewsStyleSheet.css" />
+    <Content Include="Content\script.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\PhytRx.Context.tt">
+    <Content Include="Models\Phyt-RxDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PhytRx.edmx</DependentUpon>
-      <LastGenOutput>PhytRx.Context.cs</LastGenOutput>
+      <DependentUpon>Phyt-RxDB.edmx</DependentUpon>
+      <LastGenOutput>Phyt-RxDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\PhytRx.tt">
+    <Content Include="Models\Phyt-RxDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PhytRx.edmx</DependentUpon>
-      <LastGenOutput>PhytRx.cs</LastGenOutput>
+      <DependentUpon>Phyt-RxDB.edmx</DependentUpon>
+      <LastGenOutput>Phyt-RxDB.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\PhytRx.edmx">
+    <EntityDeploy Include="Models\Phyt-RxDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PhytRx.Designer.cs</LastGenOutput>
+      <LastGenOutput>Phyt-RxDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\PhytRx.edmx.diagram">
-      <DependentUpon>PhytRx.edmx</DependentUpon>
+    <Content Include="Models\Phyt-RxDB.edmx.diagram">
+      <DependentUpon>Phyt-RxDB.edmx</DependentUpon>
     </Content>
-
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-
     <Content Include="Content\images\Front-end tags for PHYT-RX.docx" />
     <Content Include="Content\images\PatientViewPageStyleSheet.docx" />
     <Content Include="Content\images\SiteCSS.docx" />
     <Content Include="Content\images\SiteLayout.docx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -366,31 +373,31 @@
     <Content Include="Views\Durations\Details.cshtml" />
     <Content Include="Views\Durations\Edit.cshtml" />
     <Content Include="Views\Durations\Index.cshtml" />
-    <Content Include="Views\Patients\Create.cshtml" />
-    <Content Include="Views\Patients\Delete.cshtml" />
-    <Content Include="Views\Patients\Details.cshtml" />
-    <Content Include="Views\Patients\Edit.cshtml" />
-    <Content Include="Views\Patients\Index.cshtml" />
     <Content Include="Views\Exercis\Create.cshtml" />
     <Content Include="Views\Exercis\Delete.cshtml" />
     <Content Include="Views\Exercis\Details.cshtml" />
     <Content Include="Views\Exercis\Edit.cshtml" />
     <Content Include="Views\Exercis\Index.cshtml" />
-    <Content Include="Views\RXes\Create.cshtml" />
-    <Content Include="Views\RXes\Delete.cshtml" />
-    <Content Include="Views\RXes\Details.cshtml" />
-    <Content Include="Views\RXes\Edit.cshtml" />
-    <Content Include="Views\RXes\Index.cshtml" />
     <Content Include="Views\Logs\Create.cshtml" />
     <Content Include="Views\Logs\Delete.cshtml" />
     <Content Include="Views\Logs\Details.cshtml" />
     <Content Include="Views\Logs\Edit.cshtml" />
     <Content Include="Views\Logs\Index.cshtml" />
+    <Content Include="Views\Patients\Create.cshtml" />
+    <Content Include="Views\Patients\Delete.cshtml" />
+    <Content Include="Views\Patients\Details.cshtml" />
+    <Content Include="Views\Patients\Edit.cshtml" />
+    <Content Include="Views\Patients\Index.cshtml" />
     <Content Include="Views\Physicians\Create.cshtml" />
     <Content Include="Views\Physicians\Delete.cshtml" />
     <Content Include="Views\Physicians\Details.cshtml" />
     <Content Include="Views\Physicians\Edit.cshtml" />
     <Content Include="Views\Physicians\Index.cshtml" />
+    <Content Include="Views\RXes\Create.cshtml" />
+    <Content Include="Views\RXes\Delete.cshtml" />
+    <Content Include="Views\RXes\Details.cshtml" />
+    <Content Include="Views\RXes\Edit.cshtml" />
+    <Content Include="Views\RXes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,56 +1,24 @@
 ﻿<link href="~/Content/DPTViewStyleSheet.css" rel="stylesheet" />
 
+
 @model IEnumerable<PhytRxProject.Models.Patient>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.AspNetUser.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Physician.PhName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PPic)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Log.ComTxt)
-        </th>
+<h3 class="heading1">DPT Main Menu</h3>
+<div> <a href='/Patients/Create' class="btn btn-sm animated-button thar-three" id="patient-home-button">Add Patient</a> </div>
+<div class="dropdown">
+    <button class="dropbtn btn btn-sm">LOAD PATIENT</button>
+    <div class="dropdown-content">
+        @foreach (var item in Model)
+        {
+            <a>@Html.DisplayFor(modelItem => item.AspNetUser.Email) @Html.ActionLink("Details", "Details", new { id = item.PID })</a>
+            <hr />
 
-
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AspNetUser.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Physician.PhName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PPic)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Log.ComTxt)
-        </td>
-
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.PID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.PID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.PID })
-        </td>
-    </tr>
-}
-
-</table>
+        }
+    </div>
+</div>
+<div> <a href='/Exercis/Create' class="btn btn-sm animated-button thar-three" id="patient-home-button">Add Exercise</a> </div>

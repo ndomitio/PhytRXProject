@@ -19,6 +19,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.Email)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Log.ComTxt)
         </dt>
 
@@ -34,47 +42,9 @@
             @Html.DisplayFor(model => model.Physician.PhName)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AspNetUser.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AspNetUser.Email)
-        </dd>
-
-
-
     </dl>
-
 </div>
-
-
-<div id="myPatient" style="display:none">@Html.DisplayFor(model => model.UserID)</div>
-
-
-<a class="ViewRXforPatient btn btn-default">View RX</a>
-
-
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.PID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
-
-
-<script>
-
-
-    var patient = document.getElementById("myPatient").innerText.toString();
-    var selectedpatient = parseInt(patient);
-    console.log(selectedpatient);
-
-
-    $(document).ready(function () {
-
-        $("ViewRXforPatient").click(function () {
-            window.location.assign("/RXes/index/?userID=" + selectedpatient);
-        })
-
-    });
-
-</script>

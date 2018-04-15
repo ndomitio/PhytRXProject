@@ -1,6 +1,4 @@
-﻿<link href="~/Content/DPTViewStyleSheet.css" rel="stylesheet" />
-
-@model IEnumerable<PhytRxProject.Models.Duration>
+﻿@model IEnumerable<PhytRxProject.Models.Duration>
 
 @{
     ViewBag.Title = "Index";
@@ -17,50 +15,29 @@
             @Html.DisplayNameFor(model => model.DurName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Exercis.ExName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PerDays)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.XDays)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Sets)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Reps)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Holds)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Weights)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Bands)
-        </th>
-        @*<th>
             @Html.DisplayNameFor(model => model.Sets)
-        </th>*@
-        @*<th>
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Holds)
-        </th>*@
-        @*<th>
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Bands)
-        </th>*@
-        @*<th>
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Weights)
-        </th>*@
-        @*<th>
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.PerDays)
-        </th*@>
-        @*<th>
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.XDays)
-        </th>*@
-        @*<th>
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Exercis.ExName)
-        </th>*@
+        </th>
         <th></th>
     </tr>
 
@@ -70,54 +47,33 @@
             @Html.DisplayFor(modelItem => item.DurName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Exercis.ExName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PerDays)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.XDays)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Sets)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Reps)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Holds)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Weights)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Bands)
-        </td>
-        @*<td>
             @Html.DisplayFor(modelItem => item.Sets)
-        </td>*@
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Holds)
-        </td>*@
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Bands)
-        </td>*@
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Weights)
-        </td>*@
-        @*<td>
-            @Html.DisplayFor(modelItem => item.PerDays)
-        </td>*@
-        @*<td>
-            @Html.DisplayFor(modelItem => item.XDays)
-        </td>*@
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Exercis.ExName)
-        </td>*@
+        </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.DurID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.DurID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.DurID })
+            @Html.DisplayFor(modelItem => item.Holds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bands)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weights)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PerDays)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.XDays)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Exercis.ExName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DurID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DurID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DurID })
         </td>
     </tr>
 }
